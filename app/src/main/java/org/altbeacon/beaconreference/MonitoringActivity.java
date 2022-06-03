@@ -2,9 +2,7 @@ package org.altbeacon.beaconreference;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.app.NotificationManager;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -17,7 +15,6 @@ import android.content.Intent;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,9 +26,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.altbeacon.activities.MainActivity;
 import org.altbeacon.activities.SignInActivity;
-import org.altbeacon.beaconreference.BeaconReferenceApplication;
-import org.altbeacon.beaconreference.R;
-import org.altbeacon.login.LoginActivity;
+import org.altbeacon.activities.TaskActivity;
 import org.altbeacon.utilities.Constants;
 import org.altbeacon.utilities.PreferenceManager;
 
@@ -93,6 +88,16 @@ public class MonitoringActivity extends Activity implements MonitorNotifier {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		ImageButton task = findViewById(R.id.btnTask);
+
+		task.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(), TaskActivity.class);
 				startActivity(intent);
 			}
 		});

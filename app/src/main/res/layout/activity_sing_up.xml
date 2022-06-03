@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SingUpActivity"
+    tools:context="org.altbeacon.activities.SingUpActivity"
     android:clipToPadding="false"
     android:overScrollMode="never"
     android:padding="24dp"
-    android:scrollbars="none">
+    android:scrollbars="none"
+    android:background="@drawable/wwpll">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +24,7 @@
             android:layout_marginTop="40dp"
             android:textStyle="bold"
             android:textSize="@dimen/_18ssp"
-            android:text="Create new account"
+            android:text="Todos los campos son requeridos"
             android:textColor="@color/primary_text"
             />
 
@@ -46,7 +47,7 @@
                 android:id="@+id/textAddImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add image"
+                android:text="Foto de perfil"
                 android:layout_gravity="center"/>
         </FrameLayout>
 
@@ -55,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_40sdp"
-            android:hint="Name"
+            android:hint="Nombre"
             android:imeOptions="actionNext"
             android:background="@drawable/background_input"
             android:textColor="@color/primary_text"
@@ -80,7 +81,7 @@
         android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
         android:layout_marginTop="@dimen/_20sdp"
-        android:hint="Password"
+        android:hint="Contraseña"
         android:imeOptions="actionNext"
         android:background="@drawable/background_input"
         android:textColor="@color/primary_text"
@@ -92,7 +93,7 @@
         android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
         android:layout_marginTop="@dimen/_20sdp"
-        android:hint="Confirm Password"
+        android:hint="Comprobar contraseña"
         android:imeOptions="actionNone"
         android:background="@drawable/background_input"
         android:textColor="@color/primary_text"
@@ -110,7 +111,7 @@
                 android:id="@+id/buttonSigUp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Create Account"
+                android:text="Crear usuario"
                 android:background="@drawable/background_input"
                 />
             <ProgressBar
@@ -126,7 +127,7 @@
             android:id="@+id/txtLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log In"
+            android:text="Acceder"
             android:padding="20dp"
             />
     </LinearLayout>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="org.altbeacon.activities.MainActivity"
     android:animateLayoutChanges="true"
-    android:background="@color/primary">
+    android:background="@drawable/gradient_background">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/imageProfile"
@@ -54,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_16sdp"
-        android:background="@drawable/bacground_content_bottom"
+        android:background="@drawable/wwpll"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageProfile"
         >

@@ -68,6 +68,8 @@ public class BeaconReferenceApplication extends Application implements MonitorNo
 
     public void sendPostRequestJson(OkHttpClient client,String userName ,String macAddress, int rssi, String avg_rssi, int txPower) {
 
+        preferenceManager.putString(Constants.KEY_LAST_MAC, macAddress);
+
         System.out.println("Beacon found: " + macAddress);
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         HashMap<String, Object> beaconData = new HashMap<>();
@@ -77,41 +79,6 @@ public class BeaconReferenceApplication extends Application implements MonitorNo
         beaconData.put("avg_rssi", avg_rssi);
         beaconData.put("power", txPower);
         database.collection("beacons").add(beaconData);
-        /*JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("user", userName);
-            jsonObject.put("mac", macAddress.replace(":", ""));
-            jsonObject.put("rssi", String.valueOf(rssi));
-            jsonObject.put("avg_rssi", avg_rssi.replace(",", "."));
-            jsonObject.put("tx", String.valueOf(txPower));
-        } catch (JSONException e) {
-            System.out.println("This is the exception for " + macAddress);
-            e.printStackTrace();
-        }
-
-
-        MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-        RequestBody body = RequestBody.create(JSON, jsonObject.toString());
-        Request request = new Request.Builder()
-                .url("https:")
-                .post(body)
-                .build();
-
-        client.newCall(request).enqueue(new Callback() {
-            @Override public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override public void onResponse(Call call, Response response) throws IOException {
-                try (ResponseBody responseBody = response.body()) {
-                    if (!response.isSuccessful())
-                        System.out.println("Unexpected code " + response);
-                    throw new IOException("Unexpected code " + response);
-                } catch (IOException e) {
-                    System.out.println(e);
-                }
-            }
-        });*/
     }
 
     public void onCreate() {
@@ -133,11 +100,10 @@ public class BeaconReferenceApplication extends Application implements MonitorNo
 
         beaconManager.setDebug(true);
 
-        // Uncomment the code below to use backgroud in exchange for showing an icon
-        // at the top of the screen and a always-on notification
+        // Code below to use backgroud in exchange for showing an icon
 
         Notification.Builder builder = new Notification.Builder(this);
-        builder.setSmallIcon(R.drawable.logo_rm);
+        builder.setSmallIcon(R.drawable.team_icon);
         builder.setContentTitle("Press to open");
 
         Intent intent= new Intent(this, LoginActivity.class);
@@ -158,9 +124,9 @@ public class BeaconReferenceApplication extends Application implements MonitorNo
         beaconManager.enableForegroundServiceScanning(builder.build(), 456);
         beaconManager.setEnableScheduledScanJobs(false);
         beaconManager.setBackgroundBetweenScanPeriod(0);
-        beaconManager.setBackgroundScanPeriod(650);
-        beaconManager.setForegroundBetweenScanPeriod(0);
-        beaconManager.setForegroundScanPeriod(650);
+        beaconManager.setBackgroundScanPeriod(3000);
+        beaconManager.setForegroundBetweenScanPeriod(5000);
+        beaconManager.setForegroundScanPeriod(3000);
 
 
         Log.d(TAG, "setting up background monitoring in app onCreate");

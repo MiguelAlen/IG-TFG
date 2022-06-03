@@ -1,46 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="org.altbeacon.beaconreference"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
+        android:name=".BeaconReferenceApplication"
         android:allowBackup="true"
-        android:icon="@drawable/logo_rm"
+        android:icon="@drawable/team_icon"
         android:label="@string/app_name"
-        android:name="BeaconReferenceApplication"
         android:theme="@style/Theme.MyRmChat">
         <activity
             android:name="org.altbeacon.activities.SignInActivity"
-            android:label="@string/app_name"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/app_name">
             <intent-filter>
-				<action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="org.altbeacon.activities.SingUpActivity">
+        <activity android:name="org.altbeacon.activities.SingUpActivity">
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name="org.altbeacon.beaconreference.MonitoringActivity"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         <activity
             android:name="org.altbeacon.beaconreference.RangingActivity"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name"></activity>
         <activity
             android:name="org.altbeacon.activities.ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="org.altbeacon.activities.TaskActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize"/>
         <activity
@@ -57,9 +61,13 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="org.altbeacon.beacon.service.BeaconService"
+        <service
+            android:name="org.altbeacon.beacon.service.BeaconService"
             tools:node="replace">
-            <meta-data android:name="longScanForcingEnabled" android:value="true"/>
+            <meta-data
+                android:name="longScanForcingEnabled"
+                android:value="true" />
         </service>
     </application>
+
 </manifest>

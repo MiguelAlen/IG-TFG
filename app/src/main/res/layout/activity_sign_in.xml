@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SignInActivity"
+    tools:context="org.altbeacon.activities.SignInActivity"
     android:clipToPadding="false"
     android:overScrollMode="never"
     android:padding="24dp"
-    android:scrollbars="none">
+    android:scrollbars="none"
+    android:background="@drawable/wwpll">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_40sdp"
             android:textSize="@dimen/_18ssp"
-            android:text="Welcome Back!"
+            android:text="Bienvenido"
             android:textColor="@color/primary_text"
 
             />
@@ -31,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Login to continue"
+            android:text=""
             android:textSize="10dp"
             />
 
@@ -53,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_45sdp"
             android:layout_marginTop="@dimen/_20sdp"
-            android:hint="Password"
+            android:hint="Contraseña"
             android:imeOptions="actionNone"
             android:background="@drawable/background_input"
             android:textColor="@color/primary_text"
@@ -70,7 +71,7 @@
                 android:id="@+id/buttonSigIn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Sing In"
+                android:text="Iniciar sesión"
                 android:background="@drawable/background_input"
                 />
             <ProgressBar
@@ -85,7 +86,7 @@
             android:id="@+id/txtSingUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create New Account"
+            android:text="Registrarse"
             android:padding="20dp"
 
             />

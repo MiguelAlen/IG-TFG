@@ -12,6 +12,7 @@ public class Constants {
 
     //Extensiones de usuario
     public static final String KEY_DEPARTMENT = "department";
+    public static final String KEY_LAST_MAC = "lastMac";
 
     //Token FB del usuario
     public static final String KEY_FCM_TOKEN = "fcmToken";
@@ -44,5 +45,4 @@ public class Constants {
 
     //Estado online
     public static final String KEY_AVAILABILITY = "0";
-
 }
