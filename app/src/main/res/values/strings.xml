@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Real Madrid</string>
+    <!-- ACTIVITY_LOGIN -->
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="reset_password">Reset</string>
+    <string name="login_btn">Login</string>
+
+    <string name="type_a_message">Type a message</string>
+    <string name="online">Online</string>
+
+</resources>

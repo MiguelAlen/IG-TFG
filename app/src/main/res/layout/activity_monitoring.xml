@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MonitoringActivity"
+    android:background="@drawable/wwpll"
+    android:padding="50px"
+    >
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="178dp"
+        android:layout_height="178dp"
+        android:background="@drawable/background_image2"
+        android:paddingRight="5dp"
+        android:src="@drawable/img_user" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@+id/userImage"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/background_user_info"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/userImage">
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Name:"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="@dimen/_24sdp" />
+
+        <TextView
+            android:id="@+id/txtStaff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Staff:"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="@dimen/_24sdp" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Email:"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="@dimen/_24sdp" />
+
+        <TextView
+            android:id="@+id/userTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:focusable="false"
+            android:hint="User"
+            android:textColor="#009EFD"
+            android:textSize="@dimen/_20sdp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/staffTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_80sdp"
+            android:focusable="false"
+            android:hint="Staff"
+            android:textColor="#009EFD"
+            android:textSize="@dimen/_20sdp" />
+
+        <TextView
+            android:id="@+id/mailTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/_80sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:focusable="false"
+            android:hint="Email"
+            android:textColor="#009EFD"
+            android:textSize="@dimen/_12sdp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_button2"
+        android:onClick="onLogOut"
+        android:padding="5dp"
+        android:src="@drawable/icon_logout" />
+
+
+    <ImageButton
+        android:id="@+id/btnChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_button"
+        android:src="@drawable/icon_chat" />
+</RelativeLayout>

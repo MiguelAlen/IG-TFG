@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "884788398801",
+    "project_id": "ig-tfg",
+    "storage_bucket": "ig-tfg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884788398801:android:240cfa761be299a5c153f0",
+        "android_client_info": {
+          "package_name": "org.altbeacon.beaconreference"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884788398801-kqi38a33848ungm2n36njmc1kd75hrlr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.altbeacon.beaconreference",
+            "certificate_hash": "4b8d7c51f8aceddb5463773314ce24dae3a883b0"
+          }
+        },
+        {
+          "client_id": "884788398801-5ueup1eha8esd3ci314e79uje2lea221.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr836l0QCGc8P5b5h51ClZ0ThFr1tZB6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884788398801-5ueup1eha8esd3ci314e79uje2lea221.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
